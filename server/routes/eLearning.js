@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { requireAuth } = require('../middleware/auth');
-const quizModule = require('../modules/quiz');
+const quizModule = require('../modules/eLearning');
 
 /**
  * GET /api/elearning/technologies
@@ -82,8 +82,8 @@ router.post("/start", requireAuth, async (req, res) => {
 });
 
 /**
- * POST /api/quiz/submit
- * Soumet les réponses du quiz et calcule le score
+ * POST /api/eLearning/submit
+ * Soumet les réponses du eLearning et calcule le score
  */
 router.post("/submit", requireAuth, async (req, res) => {
   try {
@@ -160,7 +160,7 @@ router.post("/submit", requireAuth, async (req, res) => {
 });
 
 /**
- * GET /api/quiz/history/questions
+ * GET /api/eLearning/history/questions
  * Récupère l'historique des questions
  */
 router.get("/history/questions", requireAuth, async (req, res) => {
@@ -182,7 +182,7 @@ router.get("/history/questions", requireAuth, async (req, res) => {
 });
 
 /**
- * GET /api/quiz/history/scores
+ * GET /api/eLearning/history/scores
  * Récupère l'historique des scores
  */
 router.get("/history/scores", requireAuth, async (req, res) => {

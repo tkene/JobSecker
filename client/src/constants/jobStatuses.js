@@ -3,10 +3,10 @@ export const JOB_STATUSES = [
   "À envoyer",
   "Envoyée",
   "Relance faite",
-  "Entretien",
-  "Offre",
-  "Refusée",
-  "En attente",
+  "Entretien RH ",
+  "Entretien technique",
+  "En attente de réponse",
+  "Cloturée",
 ];
 
 // Couleurs associées à chaque statut

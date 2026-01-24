@@ -2,18 +2,9 @@
  * Interceptors Axios pour la gestion centralisée des requêtes/réponses
  */
 import axiosInstance from './axios'
-import { NOTIFICATION_TYPES } from '../config/constants'
 import { ROUTES } from '../config/constants'
 
-// Références globales (seront initialisées depuis main.js)
-let routerInstance = null
-
-/**
- * Initialise les interceptors avec l'instance Router
- * @param {Object} router - Instance Router Vue
- */
-export function setupInterceptors(router) {
-  routerInstance = router
+export function setupInterceptors() {
   // Interceptor de requête
   axiosInstance.interceptors.request.use(
     (config) => {

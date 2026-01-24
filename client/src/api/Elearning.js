@@ -4,7 +4,7 @@ import axiosInstance from './axios'
  * Récupère les technologies disponibles (Vue.JS, PHP, Symfony)
  */
 export const getTechnologies = async () => {
-  const response = await axiosInstance.get('/api/elearning/technologies')
+  const response = await axiosInstance.get('/eLearning/technologies')
   return response.data
 }
 
@@ -13,7 +13,7 @@ export const getTechnologies = async () => {
  * @param {string} technology - La technologie choisie (Vue.JS, PHP, Symfony)
  */
 export const getLearningContent = async (technology) => {
-  const response = await axiosInstance.get(`/api/elearning/content?technology=${encodeURIComponent(technology)}`)
+  const response = await axiosInstance.get(`/eLearning/content?technology=${encodeURIComponent(technology)}`)
   return response.data
 }
 
